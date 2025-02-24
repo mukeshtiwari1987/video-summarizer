@@ -36,6 +36,7 @@ def transcribe_and_summarize(video_path):
     return summary_text
 
 def load_and_resample(audio_path, target_sr=16000):
+    print(type(AudioFileClip))
     audio_clip = AudioFileClip(audio_path)
     audio_array = audio_clip.to_soundarray()
     sampling_rate = audio_clip.fps
