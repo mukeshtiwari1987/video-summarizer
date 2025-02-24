@@ -3,4 +3,6 @@ torchaudio
 whisper
 sumy
 moviepy
+numpy
+scipy
 gradio
