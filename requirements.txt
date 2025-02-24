@@ -1,0 +1,6 @@
+torch
+torchaudio
+whisper
+sumy
+moviepy
+gradio
