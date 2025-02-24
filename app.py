@@ -4,10 +4,9 @@ from sumy.summarizers.lex_rank import LexRankSummarizer
 from sumy.nlp.stemmers import Stemmer
 from sumy.parsers.plaintext import PlaintextParser
 from sumy.nlp.tokenizers import Tokenizer
-from moviepy import VideoFileClip
+from moviepy.editor import VideoFileClip, AudioFileClip
 import numpy as np
 from scipy.signal import resample
-from moviepy.audio.io import AudioFileClip
 
 def transcribe_and_summarize(video_path):
     # Extract audio from video
@@ -36,7 +35,6 @@ def transcribe_and_summarize(video_path):
     return summary_text
 
 def load_and_resample(audio_path, target_sr=16000):
-    print(type(AudioFileClip))
     audio_clip = AudioFileClip(audio_path)
     audio_array = audio_clip.to_soundarray()
     sampling_rate = audio_clip.fps
